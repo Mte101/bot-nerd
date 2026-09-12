@@ -1,0 +1,34 @@
+# secrets — never commit real env files or the injected secrets override
+.env
+.env.*
+!.env.example
+docker-compose.override.yml
+AVAILABLE_SECRETS.md
+
+# deps / build output
+node_modules/
+dist/
+build/
+.next/
+__pycache__/
+*.pyc
+*.pyo
+
+# heavy artifacts — over GitHub's 100 MB blob limit and never app source
+*.apk
+*.aab
+*.ipa
+*.dump
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Ellac platform build artifacts
+.build.log
+.build.exitcode
+.build_cmd.sh
+.display
+.credentials.json
+.claude/.credentials.json
+.DS_Store
